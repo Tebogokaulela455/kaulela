@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment - Lesedi PAS</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Include Stripe.js library from Stripe CDN -->
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header>
+    <h1>Payment Processing</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Complete Your Payment</h2>
+      <form id="paymentForm">
+        <!-- Stripe Elements will mount here for secure card details capture -->
+        <div id="card-element"></div>
+        <button type="submit">Pay R300</button>
+      </form>
+      <div id="paymentMessage"></div>
+    </section>
+  </main>
+  <!-- Include the payment JavaScript -->
+  <script src="js/payment.js"></script>
+</body>
+</html>
+

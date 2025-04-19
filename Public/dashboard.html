@@ -1,0 +1,51 @@
+<!-- public/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Lesedi PAS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Optional: Style for the analytics chart */
+    #analyticsChart {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 20px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <nav>
+      <a href="policy.html">Manage Policies</a>
+      <a href="index.html">Home</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Subscription Information Section -->
+    <section id="subscriptionStatus">
+      <h2>Subscription Information</h2>
+      <div id="subscriptionInfo"></div>
+      <button id="subscribeBtn">Activate Subscription</button>
+    </section>
+    <!-- Real-Time Reporting & Analytics Section -->
+    <section id="reports">
+      <h2>Real-Time Reporting & Analytics</h2>
+      <canvas id="analyticsChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+  
+  <!-- Include existing dashboard script if needed -->
+  <script src="js/main.js"></script>
+  
+  <!-- Load Chart.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Load custom analytics script -->
+  <script src="js/charts.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Get a Quote – Lesedi PAS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Lesedi PAS – Get a Quote</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="policy.html">Manage Policies</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Generate a New Quote</h2>
+      <form id="quoteForm">
+        <label>
+          Customer Name:
+          <input type="text" id="qCustomer" required>
+        </label><br>
+        <label>
+          Product Type:
+          <select id="qProductType">
+            <option value="life">Life Insurance</option>
+            <option value="health">Health Insurance</option>
+            <option value="car">Car Insurance</option>
+            <option value="property">Property Insurance</option>
+          </select>
+        </label><br>
+        <label>
+          Coverage Amount (ZAR):
+          <input type="number" id="qCoverage" required>
+        </label><br>
+        <label>
+          Risk Profile:
+          <select id="qRisk">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label><br>
+        <button type="submit">Get Quote</button>
+      </form>
+      <div id="quoteResult"></div>
+    </section>
+
+    <section>
+      <h2>Issue a Policy</h2>
+      <form id="issueForm">
+        <label>
+          Quote ID:
+          <input type="text" id="iQuoteId" placeholder="Paste your Quote ID here" required>
+        </label>
+        <button type="submit">Issue Policy</button>
+      </form>
+      <div id="issueResult"></div>
+    </section>
+  </main>
+
+  <script src="js/quote.js"></script>
+</body>
+</html>

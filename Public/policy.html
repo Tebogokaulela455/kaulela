@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Policy Management - Lesedi PAS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Policy Management</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Create/Edit Policy Section -->
+    <section>
+      <h2>Create or Edit Policy</h2>
+      <form id="policyForm">
+        <input type="hidden" id="policyId" name="policyId" value="">
+        <label for="customer">Customer Name:</label>
+        <input type="text" id="customer" name="customer" required>
+        <br>
+        <label for="policyDetails">Policy Details:</label>
+        <textarea id="policyDetails" name="policyDetails" required></textarea>
+        <br>
+        <label for="effectiveDate">Effective Date:</label>
+        <input type="date" id="effectiveDate" name="effectiveDate">
+        <br>
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="date" id="expiryDate" name="expiryDate">
+        <br>
+        <button type="submit">Save Policy</button>
+      </form>
+      <div id="policyMessage"></div>
+    </section>
+
+    <!-- Deactivate/Reactivate Section -->
+    <section>
+      <h2>Deactivate / Reactivate Policy</h2>
+      <input type="text" id="policyDeactivateId" placeholder="Enter Policy ID">
+      <button id="deactivateBtn">Deactivate Policy</button>
+      <button id="reactivateBtn">Reactivate Policy</button>
+      <div id="policyActionMessage"></div>
+    </section>
+
+    <!-- Search Policies Section -->
+    <section>
+      <h2>Search Policies</h2>
+      <input type="text" id="searchCustomer" placeholder="Enter customer name">
+      <button id="searchBtn">Search</button>
+      <div id="searchResults"></div>
+    </section>
+
+    <!-- Existing Policies List -->
+    <section>
+      <h2>Existing Policies</h2>
+      <div id="policiesList"></div>
+    </section>
+  </main>
+  <script src="js/policy.js"></script>
+</body>
+</html>
